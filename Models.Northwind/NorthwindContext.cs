@@ -1,4 +1,5 @@
 using Models.Northwind.Entities;
+using Models.Northwind.Migrations;
 using System.Data.Entity;
 
 namespace Models.Northwind
@@ -13,7 +14,7 @@ namespace Models.Northwind
         /// </summary>
         static NorthwindContext()
         {
-            Database.SetInitializer<NorthwindContext>(null);
+            Database.SetInitializer<NorthwindContext>(new MigrateDatabaseToLatestVersion<NorthwindContext, Configuration>());
         }
 
         /// <summary>
