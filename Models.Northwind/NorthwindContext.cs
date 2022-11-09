@@ -14,7 +14,11 @@ namespace Models.Northwind
         /// </summary>
         static NorthwindContext()
         {
-            Database.SetInitializer<NorthwindContext>(new MigrateDatabaseToLatestVersion<NorthwindContext, Configuration>());
+            //Disable initializer
+            //Database.SetInitializer<NorthwindContext>(null);
+            //Database.SetInitializer<NorthwindContext>(new CreateDatabaseIfNotExistsInitializer());
+            //Database.SetInitializer<NorthwindContext>(new DropCreateDatabaseIfModelChangesInitializer());
+            Database.SetInitializer<NorthwindContext>(new DropCreateDatabaseAlwaysInitializer());
         }
 
         /// <summary>
@@ -22,6 +26,11 @@ namespace Models.Northwind
         /// </summary>
         public NorthwindContext() : base("Northwind")
         {
+            //Disable initializer
+            //Database.SetInitializer<NorthwindContext>(null);
+            //Database.SetInitializer<NorthwindContext>(new CreateDatabaseIfNotExistsInitializer());
+            //Database.SetInitializer<NorthwindContext>(new DropCreateDatabaseIfModelChangesInitializer());
+            Database.SetInitializer<NorthwindContext>(new DropCreateDatabaseAlwaysInitializer());
         }
 
         /// <summary>
