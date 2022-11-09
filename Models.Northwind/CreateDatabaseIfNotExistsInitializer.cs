@@ -11,6 +11,8 @@ namespace Models.Northwind
     {
         protected override void Seed(NorthwindContext context)
         {
+            SeedData.Seed(context);
+
             base.Seed(context);
         }
     }

@@ -18,7 +18,7 @@ namespace Models.Northwind
             //Database.SetInitializer<NorthwindContext>(null);
             //Database.SetInitializer<NorthwindContext>(new CreateDatabaseIfNotExistsInitializer());
             //Database.SetInitializer<NorthwindContext>(new DropCreateDatabaseIfModelChangesInitializer());
-            Database.SetInitializer<NorthwindContext>(new DropCreateDatabaseAlwaysInitializer());
+            //Database.SetInitializer<NorthwindContext>(new DropCreateDatabaseAlwaysInitializer());
         }
 
         /// <summary>
@@ -28,9 +28,9 @@ namespace Models.Northwind
         {
             //Disable initializer
             //Database.SetInitializer<NorthwindContext>(null);
-            //Database.SetInitializer<NorthwindContext>(new CreateDatabaseIfNotExistsInitializer());
+            Database.SetInitializer<NorthwindContext>(new CreateDatabaseIfNotExistsInitializer());
             //Database.SetInitializer<NorthwindContext>(new DropCreateDatabaseIfModelChangesInitializer());
-            Database.SetInitializer<NorthwindContext>(new DropCreateDatabaseAlwaysInitializer());
+            //Database.SetInitializer<NorthwindContext>(new DropCreateDatabaseAlwaysInitializer());            
         }
 
         /// <summary>

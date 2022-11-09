@@ -78,6 +78,7 @@
     <Compile Include="Entities\Supplier.cs" />
     <Compile Include="Entities\Territory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeedData.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201703092242215_Setup.resx">
