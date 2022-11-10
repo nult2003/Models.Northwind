@@ -13,9 +13,11 @@ namespace Models.Northwind.Migrations
 {
     internal sealed class Configuration : DbMigrationsConfiguration<NorthwindContext>
     {
+
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;// allow loss data when Modify or remove a property on class domain
         }
 
         /// <summary>
@@ -25,10 +27,10 @@ namespace Models.Northwind.Migrations
         /// <returns></returns>
         protected override void Seed(NorthwindContext context)
         {
-            //if (System.Diagnostics.Debugger.IsAttached == false)
-            //{
-            //    System.Diagnostics.Debugger.Launch();
-            //}
+            if (System.Diagnostics.Debugger.IsAttached == false)
+            {
+                System.Diagnostics.Debugger.Launch();
+            }
 
             // This method will be called after migrating to the latest version.
             var entityTypes = new List<Type>

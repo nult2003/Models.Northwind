@@ -47,6 +47,8 @@ namespace Models.Northwind.Entities
             }
         }
 
+        
+
         /// <summary>
         /// Gets or sets the products.
         /// </summary>

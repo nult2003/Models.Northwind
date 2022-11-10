@@ -33,6 +33,18 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Migration|AnyCPU'">
+    <OutputPath>bin\Migration\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TEST|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\TEST\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
@@ -68,6 +80,10 @@
     <Compile Include="Migrations\201703092242215_Setup.Designer.cs">
       <DependentUpon>201703092242215_Setup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202211101618190_Cate_NoteColumn.cs" />
+    <Compile Include="Migrations\202211101618190_Cate_NoteColumn.designer.cs">
+      <DependentUpon>202211101618190_Cate_NoteColumn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NorthwindContext.cs" />
     <Compile Include="Entities\Order.cs" />
@@ -83,6 +99,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201703092242215_Setup.resx">
       <DependentUpon>201703092242215_Setup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211101618190_Cate_NoteColumn.resx">
+      <DependentUpon>202211101618190_Cate_NoteColumn.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <EmbeddedResource Include="Data\category.json" />

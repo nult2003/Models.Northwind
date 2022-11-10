@@ -5,20 +5,25 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models.Northwind", "Models.Northwind\Models.Northwind.csproj", "{10386012-286E-416A-8028-5D53B81FE446}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainApp", "MainApp\MainApp.csproj", "{4A727E34-2E22-4E69-A439-5CEDFEC51FB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MainApp", "MainApp\MainApp.csproj", "{4A727E34-2E22-4E69-A439-5CEDFEC51FB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Migration|Any CPU = Migration|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{10386012-286E-416A-8028-5D53B81FE446}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{10386012-286E-416A-8028-5D53B81FE446}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10386012-286E-416A-8028-5D53B81FE446}.Migration|Any CPU.ActiveCfg = Migration|Any CPU
+		{10386012-286E-416A-8028-5D53B81FE446}.Migration|Any CPU.Build.0 = Migration|Any CPU
 		{10386012-286E-416A-8028-5D53B81FE446}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10386012-286E-416A-8028-5D53B81FE446}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4A727E34-2E22-4E69-A439-5CEDFEC51FB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4A727E34-2E22-4E69-A439-5CEDFEC51FB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A727E34-2E22-4E69-A439-5CEDFEC51FB5}.Migration|Any CPU.ActiveCfg = Migration|Any CPU
+		{4A727E34-2E22-4E69-A439-5CEDFEC51FB5}.Migration|Any CPU.Build.0 = Migration|Any CPU
 		{4A727E34-2E22-4E69-A439-5CEDFEC51FB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A727E34-2E22-4E69-A439-5CEDFEC51FB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection

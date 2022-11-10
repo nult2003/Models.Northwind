@@ -14,22 +14,25 @@ namespace Models.Northwind
         /// </summary>
         static NorthwindContext()
         {
-            //Disable initializer
-            //Database.SetInitializer<NorthwindContext>(null);
-            //Database.SetInitializer<NorthwindContext>(new CreateDatabaseIfNotExistsInitializer());
-            //Database.SetInitializer<NorthwindContext>(new DropCreateDatabaseIfModelChangesInitializer());
-            //Database.SetInitializer<NorthwindContext>(new DropCreateDatabaseAlwaysInitializer());
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="NorthwindContext"/> class.
+        /// initializer and migration don't work together (https://stackoverflow.com/questions/19430502/dropcreatedatabaseifmodelchanges-ef6-results-in-system-invalidoperationexception)
         /// </summary>
         public NorthwindContext() : base("Northwind")
         {
             //Disable initializer
             //Database.SetInitializer<NorthwindContext>(null);
-            Database.SetInitializer<NorthwindContext>(new CreateDatabaseIfNotExistsInitializer());
-            //Database.SetInitializer<NorthwindContext>(new DropCreateDatabaseIfModelChangesInitializer());
+
+            // Automate migrations https://www.entityframeworktutorial.net/code-first/automated-migration-in-code-first.aspx
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<NorthwindContext, Migrations.Configuration>());
+
+            // === work for setup new machine on production environment
+            //Database.SetInitializer<NorthwindContext>(new CreateDatabaseIfNotExistsInitializer());
+
+            // Support for Testing/Development Environment (don't have any connection to the database)
+            //Database.SetInitializer<NorthwindContext>(new DropCreateDatabaseIfModelChangesInitializer());            
             //Database.SetInitializer<NorthwindContext>(new DropCreateDatabaseAlwaysInitializer());            
         }
 

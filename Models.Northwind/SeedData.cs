@@ -39,7 +39,7 @@ namespace Models.Northwind
                 typeof(Territory)
             };
 
-            var ns = typeof(Configuration).Assembly.FullName.Split(',')[0];
+            var ns = typeof(SeedData).Assembly.FullName.Split(',')[0];
             var dataNS = $"{ns}.Data";
             foreach (var type in entityTypes)
             {
@@ -110,7 +110,7 @@ namespace Models.Northwind
         private static string GetResource(string resourceName)
         {
             var result = string.Empty;
-            var assembly = typeof(Configuration).Assembly;
+            var assembly = typeof(SeedData).Assembly;
 
             using (var stream = assembly.GetManifestResourceStream(resourceName))
             using (var reader = new StreamReader(stream, Encoding.GetEncoding("iso-8859-1")))
